@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Multi-Section Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        header, main, footer {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        img, video {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 3px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Personal Web Page</h1>
+    <p>Demonstrating lists, tables, media, and an accessible HTML5 form</p>
+</header>
+
+<main>
+
+    <!-- Section 1: Lists -->
+    <section>
+        <h2>My Hobbies</h2>
+        <ul>
+            <li>Reading technology blogs</li>
+            <li>Coding small web projects</li>
+            <li>Photography and photo editing</li>
+        </ul>
+        <h3>Daily To-Do List</h3>
+        <ol>
+            <li>Check emails</li>
+            <li>Work on coding projects</li>
+            <li>Exercise</li>
+        </ol>
+    </section>
+
+    <!-- Section 2: Table -->
+    <section>
+        <h2>Weekly Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Team Meeting</td>
+                    <td>10:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Project Development</td>
+                    <td>2:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Code Review</td>
+                    <td>4:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 3: Media -->
+    <section>
+        <h2>Media Showcase</h2>
+        <figure>
+            <img src="a turtle.jpg" alt="turtle underwater">
+            <figcaption>A turtle underwater</figcaption>
+        </figure>
+        <figure>
+            <video controls>
+                <source src="animation video.mp4" type="video/mp4" width="300" height="200" >
+                Your browser does not support HTML video.
+            </video>
+            <figcaption>section of an animation</figcaption>
+        </figure>
+    </section>
+
+    <!-- Section 4: HTML5 Form -->
+    <section>
+        <h2>Contact & Registration Form</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fname">Full Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="John Doe" required minlength="3">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254700000000" 
+                       pattern="^\+?\d{10,15}$" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required minlength="5" maxlength="15">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" 
+                       placeholder="Min 8 characters" required minlength="8">
+
+                <label for="confirmpw">Confirm Password:</label>
+                <input type="password" id="confirmpw" name="confirmpw" required minlength="8">
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                </select>
+
+                <label>Subscription Plan:</label>
+                <input type="radio" id="basic" name="plan" value="basic" required>
+                <label for="basic">Basic</label>
+                <input type="radio" id="premium" name="plan" value="premium">
+                <label for="premium">Premium</label>
+
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the terms and conditions
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="about">Tell us about yourself:</label>
+                <textarea id="about" name="about" rows="4" placeholder="Write something here..."></textarea>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 My Personal Web Page</p>
+</footer>
+
+</body>
+</html>
